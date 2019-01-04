@@ -1,0 +1,45 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      	[
+            8.41935485601425,
+            49.01449047698234
+          ],
+          [
+            8.419349491596222,
+            49.01442010991541
+          ],
+          [
+            8.419432640075684,
+            49.014413073203265
+          ],
+          [
+            8.419443368911743,
+            49.01448344028011
+          ]
+    ]
+  },
+  "properties": {
+    "title": "022",
+    "id": 1,
+    "poiId": 1,
+    "identifier": "022",
+    "campusId": 1,
+    "floorId": 1,
+    "zLevel": 1,
+    "floorName": "EG",
+    "buildingName": "50.30.",
+    "description": null,
+    "doors": [
+	 [
+
+	 ]
+	],
+    "names": [
+      "Office",
+      "Buero"
+    ]
+  }
+}

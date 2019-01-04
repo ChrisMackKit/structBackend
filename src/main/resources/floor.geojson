@@ -1,0 +1,17 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+      ]
+    ]
+  },
+  "properties": {
+    "id": 1,
+    "name": "EG",
+    "buildingId": 1,
+    "campusId": 1,
+    "z": 1
+  }
+}

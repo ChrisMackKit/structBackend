@@ -13,6 +13,7 @@ public class Position {
     @Getter
     private Coordinates coordinates;
     /**
+     * Or
     *private int x;
     *
     *private int y;

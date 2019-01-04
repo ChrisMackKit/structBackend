@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "beacon")
@@ -43,4 +44,8 @@ public class Beacon {
 
     @Column (name = "coordinates")
     private Coordinates coordinates;
+
+    //About the kind of poi it is. Office, Hallway, toilets. We could add Beacons to poi and make "Beacon" a name.
+    @Column (name = "names")
+    private ArrayList<String> names;
 }

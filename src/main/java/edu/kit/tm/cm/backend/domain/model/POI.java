@@ -50,4 +50,8 @@ public class POI {
     @OneToMany
     @Column (name = "coordinates")
     private ArrayList<Coordinates> coordinates;
+
+    //About the kind of poi it is. Office, Hallway, toilets. We could add Beacons to poi and make "Beacon" a name.
+    @Column (name = "names")
+    private ArrayList<String> names;
 }
