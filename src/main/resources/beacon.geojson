@@ -1,0 +1,33 @@
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      	[
+          8.419505059719086,
+          49.01443594251413
+          ]
+    ]
+  },
+  "properties": {
+    "title": "Beacon1",
+    "id": 3,
+    "poiId": 3,
+    "identifier": "Beacon1",
+    "campusId": 1,
+    "floorId": 1,
+    "zLevel": 1,
+    "floorName": "EG",
+    "buildingName": "50.30.",
+    "description": null,
+    "doors": [
+	 [
+
+	 ]
+	],
+    "names": [
+      "Beacon",
+      "Sensor"
+    ]
+  }
+}
