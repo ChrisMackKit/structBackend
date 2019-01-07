@@ -1,3 +1,4 @@
+
 package edu.kit.tm.cm.backend.domain.model;
 
 import lombok.AllArgsConstructor;
@@ -54,5 +55,7 @@ public class POI {
     //About the kind of poi it is. Office, Hallway, toilets. We could add Beacons to poi and make "Beacon" a name.
     @Column (name = "names")
     private ArrayList<String> names;
+
+
 
 }

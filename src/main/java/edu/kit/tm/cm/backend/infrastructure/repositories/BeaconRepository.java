@@ -1,3 +1,4 @@
+/*
 package edu.kit.tm.cm.backend.infrastructure.repositories;
 
 import edu.kit.tm.cm.backend.domain.model.Beacon;
@@ -7,3 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BeaconRepository extends JpaRepository<Beacon, Long>{
 }
+*/

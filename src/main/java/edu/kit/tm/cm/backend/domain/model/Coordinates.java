@@ -1,3 +1,4 @@
+
 package edu.kit.tm.cm.backend.domain.model;
 
 import lombok.AllArgsConstructor;
@@ -7,6 +8,7 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 
+
 /**
  * Coordinates: (x,y) == (longitude, latitude)
  * (x,y) = (0,0) --> top left corner
@@ -14,6 +16,7 @@ import javax.persistence.Entity;
  * So X and longitude point in the same direction
  * Y and latitude point in different directions. Y down and Lat up (at least in the north part of the globe)
  */
+
 
 @Entity
 @AllArgsConstructor
@@ -32,6 +35,5 @@ public class Coordinates {
     public void setY(double y) {
         this.xy[1] = y;
     }
-
 
 }

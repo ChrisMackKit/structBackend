@@ -1,3 +1,4 @@
+
 package edu.kit.tm.cm.backend.domain.model;
 
 import lombok.AllArgsConstructor;
@@ -20,10 +21,12 @@ public class Position {
 
     private ArrayList<Beacon> beaconList;
 
+
     /*
     * Takes List of rssi's orders them into classes 1 to 3 (based on the Beacon signal classes) and based on those
     * Beacons it finds the middle between the beacons in the same class.
      */
+
     public Coordinates ownPosition(ArrayList<Rssi> rssi) {
         ArrayList<Rssi> class1 = beaconClass1(rssi);
         ArrayList<Rssi> class2 = beaconClass2(rssi);
@@ -74,9 +77,11 @@ public class Position {
         return beaconClass3;
     }
 
-    /*
+
+/*
     *Takes a rssi, searches the Beacon List for the Beacon with the same name and returns the coordinates
      */
+
     public Coordinates getBeaconCoordinates(Rssi beacon) {
         for (int i = 0; i < beaconList.size(); i++) {
             if(beaconList.get(i).isBeacon(beacon.getBeaconName())) {
@@ -108,3 +113,4 @@ public class Position {
     }
 
 }
+

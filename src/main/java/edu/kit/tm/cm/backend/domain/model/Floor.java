@@ -1,3 +1,4 @@
+
 package edu.kit.tm.cm.backend.domain.model;
 
 import lombok.AllArgsConstructor;
@@ -33,4 +34,5 @@ public class Floor {
     //Number of the floor basically
     @Column (name = "z")
     private int z;
+
 }

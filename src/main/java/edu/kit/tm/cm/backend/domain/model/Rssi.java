@@ -1,3 +1,4 @@
+
 package edu.kit.tm.cm.backend.domain.model;
 
 import lombok.AllArgsConstructor;

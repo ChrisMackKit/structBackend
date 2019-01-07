@@ -1,3 +1,4 @@
+
 package edu.kit.tm.cm.backend.domain.model;
 
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 @AllArgsConstructor
 @Builder
 @Getter
-public class Building{
+public class Building {
 
 
     @Id
@@ -84,5 +85,6 @@ public class Building{
         }
         return coordinates;
     }
+
 
 }
