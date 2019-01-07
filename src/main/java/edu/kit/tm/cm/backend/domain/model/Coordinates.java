@@ -18,9 +18,10 @@ import javax.persistence.Entity;
 @Entity
 @AllArgsConstructor
 @Builder
+@Getter
 public class Coordinates {
 
-    @Getter
+
     @Setter
     private double[] xy = new double[2];
     //Setter for x coordinate

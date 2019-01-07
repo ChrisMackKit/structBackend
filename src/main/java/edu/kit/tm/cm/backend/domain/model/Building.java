@@ -11,9 +11,10 @@ import java.util.ArrayList;
 @Table(name = "building")
 @AllArgsConstructor
 @Builder
+@Getter
 public class Building{
 
-    @Getter
+
     @Id
     @Column (name = "id")
     private int id;

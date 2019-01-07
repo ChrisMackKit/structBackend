@@ -11,10 +11,10 @@ import java.util.ArrayList;
 @Table(name = "POI")
 @AllArgsConstructor
 @Builder
+@Getter
 public class POI {
 
 
-    @Getter
     @Id
     @Column(name = "id")
     private int id;
@@ -54,4 +54,5 @@ public class POI {
     //About the kind of poi it is. Office, Hallway, toilets. We could add Beacons to poi and make "Beacon" a name.
     @Column (name = "names")
     private ArrayList<String> names;
+
 }

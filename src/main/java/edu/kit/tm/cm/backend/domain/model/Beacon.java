@@ -11,9 +11,10 @@ import java.util.ArrayList;
 @Table(name = "beacon")
 @AllArgsConstructor
 @Builder
+@Getter
 public class Beacon {
 
-    @Getter
+
     @Id
     @Column (name = "id")
     private int id;
@@ -48,4 +49,12 @@ public class Beacon {
     //About the kind of poi it is. Office, Hallway, toilets. We could add Beacons to poi and make "Beacon" a name.
     @Column (name = "names")
     private ArrayList<String> names;
+
+    public boolean isBeacon(String name) {
+        if(this.title == name) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
