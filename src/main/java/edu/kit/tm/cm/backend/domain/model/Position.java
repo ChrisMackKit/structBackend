@@ -33,12 +33,11 @@ public class Position {
         ArrayList<Rssi> class3 = beaconClass3(rssi);
         double[] x = {0, 0};
         Coordinates ownPosition = new Coordinates(x);
-        int timesBeaconWasNotFound = 0;
-        if (class1 != null) {
+        if (class1.size() != 0) {
             ownPosition = positionBetweenBeacon(class1);
-        } else if (class2 != null) {
+        } else if (class2.size() != 0) {
             ownPosition = positionBetweenBeacon(class2);
-        } else if (class3 != null) {
+        } else if (class3.size() != 0) {
             ownPosition = positionBetweenBeacon(class3);
         }
         return ownPosition;
