@@ -46,7 +46,7 @@ public class POI {
 
     @OneToMany
     @Column (name =  "doors")
-    private ArrayList<Coordinates> door;
+    private double[] door;
 
     @OneToMany
     @Column (name = "coordinates")

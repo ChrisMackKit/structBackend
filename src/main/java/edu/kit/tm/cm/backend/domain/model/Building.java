@@ -38,12 +38,15 @@ public class Building {
 
     //Find point 0,0 for the Indoor Coordinate System
     public Coordinates findZero(ArrayList<Coordinates> coordinates) {
-        systemZero = coordinates.get(0);
+        double[] init = {0.0, 0.0};
+        Coordinates systemZero = new Coordinates(init);
+        systemZero.setX(coordinates.get(0).getXy()[0]);
+        systemZero.setY(coordinates.get(0).getXy()[1]);
         for(int i = 1; i < coordinates.size(); i++){
             if (coordinates.get(i).getXy()[0] < systemZero.getXy()[0]) {
                 systemZero.setX(coordinates.get(i).getXy()[0]);
             }
-            if (coordinates.get(i).getXy()[1] < systemZero.getXy()[1]) {
+            if (coordinates.get(i).getXy()[1] > systemZero.getXy()[1]) {
                 systemZero.setY(coordinates.get(i).getXy()[1]);
             }
         }
@@ -80,10 +83,12 @@ public class Building {
     //uses function intoMeter for whole list
     public ArrayList<Coordinates> newList(ArrayList<Coordinates> coordinates) {
         Coordinates zero = findZero(coordinates);
+        ArrayList<Coordinates> newCoords = new ArrayList<Coordinates>();
         for (int j = 0; j < coordinates.size(); j++) {
-            coordinates.set(j, intoMeter(coordinates.get(j), zero));
+            newCoords.add(j, intoMeter(coordinates.get(j), zero));
+
         }
-        return coordinates;
+        return newCoords;
     }
 
 
