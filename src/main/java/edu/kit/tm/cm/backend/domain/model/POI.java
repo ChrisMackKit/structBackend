@@ -4,7 +4,7 @@ package edu.kit.tm.cm.backend.domain.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
-
+import  edu.kit.tm.cm.backend.domain.model.Building;
 import javax.persistence.*;
 import java.util.ArrayList;
 
@@ -56,6 +56,15 @@ public class POI {
     @Column (name = "names")
     private ArrayList<String> names;
 
+    //uses function intoMeter (Building) for whole list
+    public ArrayList<Coordinates> newList(ArrayList<Coordinates> coordinatesRoom, ArrayList<Coordinates> coordinatesBuilding) {
+        Coordinates zero = Building.findZero(coordinatesBuilding);
+        ArrayList<Coordinates> newCoords = new ArrayList<Coordinates>();
+        for (int j = 0; j < coordinatesRoom.size(); j++) {
+            newCoords.add(j, Building.intoMeter(coordinatesRoom.get(j), zero));
 
+        }
+        return newCoords;
+    }
 
 }

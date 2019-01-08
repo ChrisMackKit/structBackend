@@ -37,7 +37,7 @@ public class Building {
     private Coordinates systemZero;
 
     //Find point 0,0 for the Indoor Coordinate System
-    public Coordinates findZero(ArrayList<Coordinates> coordinates) {
+    public static Coordinates findZero(ArrayList<Coordinates> coordinates) {
         double[] init = {0.0, 0.0};
         Coordinates systemZero = new Coordinates(init);
         systemZero.setX(coordinates.get(0).getXy()[0]);
@@ -53,7 +53,7 @@ public class Building {
         return systemZero;
     }
     // convert from GeoJson coordinates into our coordinates in Meter
-    public Coordinates intoMeter(Coordinates coordinates, Coordinates zero) {
+    public static Coordinates intoMeter(Coordinates coordinates, Coordinates zero) {
         //x coordinate
         double R = 6378.137; // Radius of earth in KM
         double dLat1 = zero.getXy()[1] * Math.PI / 180 - zero.getXy()[1] * Math.PI / 180;
@@ -81,7 +81,7 @@ public class Building {
     }
 
     //uses function intoMeter for whole list
-    public ArrayList<Coordinates> newList(ArrayList<Coordinates> coordinates) {
+    public static  ArrayList<Coordinates> newList(ArrayList<Coordinates> coordinates) {
         Coordinates zero = findZero(coordinates);
         ArrayList<Coordinates> newCoords = new ArrayList<Coordinates>();
         for (int j = 0; j < coordinates.size(); j++) {
